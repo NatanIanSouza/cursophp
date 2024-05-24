@@ -60,8 +60,33 @@ echo "<hr>";
 
 // Arrays multidimensionais -- Contém 1 ou mais arrays.
 $times = array(
-        "cariocas" => array("vasco", "flamengo", "botafogo"),
+        "cariocas" => array("campeao"=> "vasco", "vice"=> "flamengo", "Terceiro"=> "botafogo", "Pineiros"),
         "paulistas" => array("santos", "sao paulo", "palmeiras"),
         "baianos" => array("bahia", "vitoria", "itabuna")
         );
-echo $times["cariocas"][1];
+echo $times["paulistas"][1];
+echo "<br>";
+
+foreach($times["cariocas"] as $indice => $valor) {
+    echo $indice.": ".$valor."<br>";
+}
+
+// echo "<br>";
+// print_r($times["cariocas"]);
+
+// foreach($times["paulistas"] as $indice => $valor) {
+//     echo $indice.": ".$valor."<br>";
+// }
+
+// $regioes = array(
+//     "Norte" => array("Roraima", "Acre", "Amapá", "Amazonas", "Pará", "Rondônia", "Tocantins")
+//   , "Nordeste"  => array("Maranhão", "Piauí", "Ceará", "Rio Grande do Norte", "Paraíba", "Pernambuco", "Alagoas", "Sergipe", "Bahia")
+//   , "CentroOeste" => array("Goiás", "Mato Grosso", "Mato Grosso do Sul", "Distrito Federal")
+//   , "Sudeste" => array("Espírito Santo", "Minas Gerais", "São Paulo", "Rio de Janeiro")
+//   , "Sul" => array("Santa Catarina", "Paraná", "Rio Grande do Sul")
+// );
+
+// echo "Os estados da região sul são <br/>";
+// foreach($regioes['Sul'] as $estado){
+//   echo $estado . "<br/>";
+// }
