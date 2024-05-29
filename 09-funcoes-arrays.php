@@ -8,6 +8,11 @@
  * array_pop($array) = exclui a última posição do array
  * array_shift($array) = exclui a primeira posição do array
  * array_unshift($array, "valor") = adiciona um ou mais elementos no início do array
+ * array_push($array, "valor", "valor") = adiciona um ou mais elementos no fim do array
+ * array_combine($keys, $values) = mescla dois arrays, sendo o primeiro parâmetro as chaves/índices e o segundo os valores
+ * array_sum() = calcula a soma dos elementos de um array
+ * explode("/", "29/05/2024") = transforma string em array
+ * implode("-", $array) = transforma array em string
  */
 
 $nomes = array("Natan", "Felipe", "Matheus", "Bernardo");
@@ -81,3 +86,56 @@ echo "<br>";
 // array_unshift
 array_unshift($frutas, "Manga", "Acerola", "Morango");
 print_r($frutas);
+echo "<br>";
+
+array_shift($frutas); // Para voltar ao array original, apaguei os itens adicionados
+array_shift($frutas);
+array_shift($frutas);
+
+// array_push
+array_push($frutas, "Manga", "Acerola", "Morango");
+print_r($frutas);
+echo "<hr>";
+
+//////////////////////////////
+
+$keys = array("Campeão", "Vice", "Terceiro");
+$values = array("Vasco", "Flamengo", "Botafogo");
+
+// array_combine
+$times = array_combine($keys, $values);
+print_r($times);
+echo "<hr>";
+
+/////////////////////////////
+
+$soma = array(5,9.3,27,1.8);
+
+// array_sum
+$total = array_sum($soma);
+echo $total;
+// dá para fazer direto no echo também
+echo "<br>".array_sum($soma);
+echo "<hr>";
+
+////////////////////////////
+
+$data = "29/05/2024";
+$frase = "Meu nome não é Jhonny";
+
+// explode
+$novaData = explode("/", $data);
+print_r($novaData);
+echo "<br>";
+
+$array = explode(" ", $frase);
+print_r($array);
+echo "<hr>";
+
+///////////////////////////
+
+$pessoas = array("Natan", "Rodrigo", "Solimões", "Neusa");
+
+// implode
+$string = implode(", ", $pessoas);
+echo $string;
